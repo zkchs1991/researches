@@ -11,9 +11,4 @@
 
     <artifactId>spring-boot-jersey</artifactId>
 
-    <properties>
-        <java.version>1.8</java.version>
-    </properties>
-
-
 </project>
