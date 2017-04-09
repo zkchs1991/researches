@@ -14,8 +14,13 @@
     <description>Spring Boot Samples</description>
 
     <modules>
+        <module>spring-boot-common</module>
+        <module>spring-boot-entity</module>
         <module>spring-boot-mybatis</module>
+        <module>spring-boot-jpa</module>
+        <module>spring-boot-service</module>
         <module>spring-boot-jersey</module>
+        <module>spring-boot-mvc</module>
     </modules>
 
     <properties>
@@ -79,6 +84,43 @@
                 <type>pom</type>
                 <scope>import</scope>
                 <version>1.4.5.RELEASE</version>
+            </dependency>
+
+            <!-- owns -->
+            <dependency>
+                <groupId>com.zk</groupId>
+                <artifactId>spring-boot-common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zk</groupId>
+                <artifactId>spring-boot-entity</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zk</groupId>
+                <artifactId>spring-boot-mybatis</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zk</groupId>
+                <artifactId>spring-boot-jpa</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zk</groupId>
+                <artifactId>spring-boot-service</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zk</groupId>
+                <artifactId>spring-boot-jersey</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zk</groupId>
+                <artifactId>spring-boot-mvc</artifactId>
+                <version>${project.version}</version>
             </dependency>
 
             <!-- mybatis-spring-boot-starter -->
