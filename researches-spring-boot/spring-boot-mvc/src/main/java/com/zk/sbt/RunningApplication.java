@@ -8,7 +8,6 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
  * Created by Qcon on 2017/4/9.
  */
 @SpringBootApplication
-@EnableAspectJAutoProxy
 public class RunningApplication {
 
     public static void main(String[] args) {

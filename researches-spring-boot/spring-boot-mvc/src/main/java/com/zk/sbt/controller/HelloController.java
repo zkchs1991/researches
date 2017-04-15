@@ -1,6 +1,5 @@
 package com.zk.sbt.controller;
 
-import com.zk.sbt.starter.log.autoconfigure.LogAutoConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
