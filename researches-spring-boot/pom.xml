@@ -124,6 +124,16 @@
                 <artifactId>spring-boot-mvc</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.zk</groupId>
+                <artifactId>spring-boot-jsp</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zk</groupId>
+                <artifactId>spring-boot-log-starter</artifactId>
+                <version>${project.version}</version>
+            </dependency>
 
             <!-- mybatis-spring-boot-starter -->
             <dependency>
