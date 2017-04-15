@@ -22,6 +22,7 @@
         <module>spring-boot-jersey</module>
         <module>spring-boot-mvc</module>
         <module>spring-boot-jsp</module>
+        <module>spring-boot-log-starter</module>
     </modules>
 
     <properties>
