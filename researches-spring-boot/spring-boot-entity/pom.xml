@@ -10,4 +10,12 @@
     </parent>
     <artifactId>spring-boot-entity</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>javax.persistence</groupId>
+            <artifactId>persistence-api</artifactId>
+            <version>${persistence-api.version}</version>
+        </dependency>
+    </dependencies>
+
 </project>
