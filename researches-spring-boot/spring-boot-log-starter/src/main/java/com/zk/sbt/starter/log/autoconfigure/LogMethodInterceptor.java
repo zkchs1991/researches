@@ -18,7 +18,9 @@ public class LogMethodInterceptor implements MethodInterceptor {
     private List<String> exclude;
 
     public LogMethodInterceptor(String[] exclude) {
-        this.exclude = Arrays.asList(exclude);
+        if (exclude != null){
+            this.exclude = Arrays.asList(exclude);
+        }
     }
 
     @Override
