@@ -12,8 +12,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot</artifactId>
+            <groupId>com.zk</groupId>
+            <artifactId>spring-boot-log-starter</artifactId>
         </dependency>
 
         <dependency>
