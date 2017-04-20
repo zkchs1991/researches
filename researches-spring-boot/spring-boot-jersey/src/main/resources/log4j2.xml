@@ -14,7 +14,7 @@
             </PatternLayout>
         </Console>
 
-        <RollingFile name="FileSystem" fileName="${LogHome}/spring-boot-mvc.log" filePattern="${LogHome}/$${date:yyyy-MM}/task-%d{yyyy-MM-dd}-%i.log.gz">
+        <RollingFile name="FileSystem" fileName="${LogHome}/spring-boot-jersey.log" filePattern="${LogHome}/$${date:yyyy-MM}/task-%d{yyyy-MM-dd}-%i.log.gz">
             <PatternLayout>
                 <Pattern>${LogPattern}</Pattern>
             </PatternLayout>
@@ -27,17 +27,9 @@
     </Appenders>
 
     <Loggers>
-
-        <Logger name="org.springframework" level="info" />
-        <Logger name="org.apache" level="info" />
-        <Logger name="com.zk" level="info" additivity="false">
-            <AppenderRef ref="Console" />
-        </Logger>
-
         <Root level="info">
             <AppenderRef ref="Console" />
         </Root>
-
     </Loggers>
 
 </Configuration>
