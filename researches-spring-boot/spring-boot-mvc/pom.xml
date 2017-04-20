@@ -17,7 +17,7 @@
         <!--</dependency>-->
         <dependency>
             <groupId>com.zk</groupId>
-            <artifactId>spring-boot-log-starter</artifactId>
+            <artifactId>spring-boot-common</artifactId>
         </dependency>
 
         <!-- spring-boot -->
