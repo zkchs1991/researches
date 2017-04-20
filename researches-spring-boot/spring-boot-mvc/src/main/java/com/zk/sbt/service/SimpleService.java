@@ -1,4 +1,4 @@
-package com.zk.sbt.controller;
+package com.zk.sbt.service;
 
 import com.zk.sbt.starter.log.annotation.Log;
 import org.springframework.stereotype.Service;
