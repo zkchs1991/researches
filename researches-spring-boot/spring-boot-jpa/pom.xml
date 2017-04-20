@@ -13,10 +13,6 @@
     <dependencies>
         <dependency>
             <groupId>com.zk</groupId>
-            <artifactId>spring-boot-log-starter</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.zk</groupId>
             <artifactId>spring-boot-common</artifactId>
         </dependency>
         <dependency>
