@@ -28,7 +28,7 @@ public class WebAppConfig extends WebMvcConfigurerAdapter{
         return resolver;
     }
 
-    /** 静态资源文件路径, */
+    /** 静态资源文件路径 */
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/view/**").addResourceLocations("/view/");
