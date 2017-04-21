@@ -178,7 +178,7 @@
                     <apiSources>
                         <apiSource>
                             <springmvc>false</springmvc>
-                            <locations>com.zk.sbt.resources</locations>
+                            <locations>com.zk.sbt.resource</locations>
                             <schemes>http,https</schemes>
                             <host>localhost</host>
                             <basePath>/apiv1</basePath>
