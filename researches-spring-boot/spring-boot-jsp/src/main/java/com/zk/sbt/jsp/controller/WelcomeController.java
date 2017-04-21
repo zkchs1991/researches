@@ -1,4 +1,4 @@
-package com.zk.sbt.jsp;
+package com.zk.sbt.jsp.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
