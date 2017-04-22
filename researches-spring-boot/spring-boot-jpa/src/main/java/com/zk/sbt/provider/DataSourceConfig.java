@@ -16,6 +16,7 @@ import javax.sql.DataSource;
  * Created by zk_chs on 4/22/17.
  */
 @Configuration
+//@PropertySource(value = "datasource.properties")
 public class DataSourceConfig {
 
     @Bean(initMethod = "init", destroyMethod = "close")

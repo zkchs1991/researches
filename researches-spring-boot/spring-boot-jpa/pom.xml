@@ -15,10 +15,6 @@
             <groupId>com.zk</groupId>
             <artifactId>spring-boot-common</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.zk</groupId>
-            <artifactId>spring-boot-entity</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
