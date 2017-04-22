@@ -1,5 +1,7 @@
 package com.zk.sbt;
 
+import com.alibaba.druid.support.http.StatViewServlet;
+import com.alibaba.druid.support.http.WebStatFilter;
 import com.zk.sbt.resource.apiv1.ProjectResourceConfigV1;
 import com.zk.sbt.resource.apiv2.ProjectResourceConfigV2;
 import org.glassfish.jersey.servlet.ServletContainer;
@@ -81,44 +83,26 @@ public class Config {
         return projectResourceConfigV2;
     }
 
-//    @Bean(initMethod = "init", destroyMethod = "close")
-//    @ConfigurationProperties(prefix = "datasource.db1")
-//    public DataSource db1DataSource() {
-//        return new DruidDataSource();
-//    }
-//
-//    @Bean
-//    public LocalContainerEntityManagerFactoryBean db1EntityManagerFactory(EntityManagerFactoryBuilder builder) {
-//        return builder.dataSource(db1DataSource())
-//                .packages(Developer.class)
-//                .persistenceUnit("db1")
-//                .properties(MapTool.<String, String>builder()
-//                        .put(AvailableSettings.HBM2DDL_AUTO, "update")
-//                        .put(AvailableSettings.SHOW_SQL, "true")
-//                        .buildMap())
-//                .build();
-//    }
-//
-//    /** druid自带监控 */
-//    @Bean
-//    public ServletRegistrationBean druidServlet() {
-//        ServletRegistrationBean reg = new ServletRegistrationBean();
-//        reg.setServlet(new StatViewServlet());
-//        reg.addUrlMappings("/druid/*");
-////        reg.addInitParameter("allow", "127.0.0.1"); //白名单
-////        reg.addInitParameter("deny",""); //黑名单
-//        reg.addInitParameter("loginUsername", "zk_chs");
-//        reg.addInitParameter("loginPassword", "zk_chs");
-//        return reg;
-//    }
-//
-//    @Bean
-//    public FilterRegistrationBean filterRegistrationBean() {
-//        FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean();
-//        filterRegistrationBean.setFilter(new WebStatFilter());
-//        filterRegistrationBean.addUrlPatterns("/*");
-//        filterRegistrationBean.addInitParameter("exclusions", "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*");
-//        return filterRegistrationBean;
-//    }
+    /** druid自带监控 */
+    @Bean
+    public ServletRegistrationBean druidServlet() {
+        ServletRegistrationBean reg = new ServletRegistrationBean();
+        reg.setServlet(new StatViewServlet());
+        reg.addUrlMappings("/druid/*");
+//        reg.addInitParameter("allow", "127.0.0.1"); //白名单
+//        reg.addInitParameter("deny",""); //黑名单
+        reg.addInitParameter("loginUsername", "zk_chs");
+        reg.addInitParameter("loginPassword", "zk_chs");
+        return reg;
+    }
+
+    @Bean
+    public FilterRegistrationBean filterRegistrationBean() {
+        FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean();
+        filterRegistrationBean.setFilter(new WebStatFilter());
+        filterRegistrationBean.addUrlPatterns("/*");
+        filterRegistrationBean.addInitParameter("exclusions", "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*");
+        return filterRegistrationBean;
+    }
 
 }
