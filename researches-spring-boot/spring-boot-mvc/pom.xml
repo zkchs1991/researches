@@ -11,13 +11,9 @@
     <artifactId>spring-boot-mvc</artifactId>
 
     <dependencies>
-        <!--<dependency>-->
-            <!--<groupId>com.zk</groupId>-->
-            <!--<artifactId>spring-boot-service</artifactId>-->
-        <!--</dependency>-->
         <dependency>
             <groupId>com.zk</groupId>
-            <artifactId>spring-boot-common</artifactId>
+            <artifactId>spring-boot-service</artifactId>
         </dependency>
 
         <!-- spring-boot -->
