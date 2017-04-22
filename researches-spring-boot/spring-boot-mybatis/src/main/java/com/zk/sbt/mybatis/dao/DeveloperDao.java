@@ -14,7 +14,7 @@ public class DeveloperDao {
     @Autowired
     private DeveloperMapper developerMapper;
 
-    private Developer findById (Long developerId){
+    public Developer findById (Long developerId){
         return developerMapper.findById(developerId);
     }
 
