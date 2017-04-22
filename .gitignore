@@ -27,4 +27,5 @@ logs/
 mvnw
 mvnw.cmd
 generated/
+.DS_Store
 D/\workspace\loghome
