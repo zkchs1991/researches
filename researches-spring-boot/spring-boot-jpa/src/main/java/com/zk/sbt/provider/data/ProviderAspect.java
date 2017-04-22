@@ -18,7 +18,7 @@ public class ProviderAspect {
 
     private static Logger log = LogManager.getLogger();
 
-    @Around("execution(* com.zk.provider.data..*(..))")
+    @Around("execution(* com.zk.sbt.provider.data..*(..))")
     public Object beforeDataMethod(ProceedingJoinPoint pjp) throws Throwable {
         String methodName = pjp.getSignature().getName();
         long start = System.currentTimeMillis();
