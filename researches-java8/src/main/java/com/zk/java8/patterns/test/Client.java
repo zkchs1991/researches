@@ -1,11 +1,12 @@
 package com.zk.java8.patterns.test;
 
-import com.github.jdk.patterns.event.ClickEvent;
-import com.github.jdk.patterns.event.DblClickEvent;
-import com.github.jdk.patterns.event.Event;
-import com.github.jdk.patterns.listener.ClickEventListener;
-import com.github.jdk.patterns.listener.DblClickEventListener;
-import com.github.jdk.patterns.source.ClickSource;
+
+import com.zk.java8.patterns.event.ClickEvent;
+import com.zk.java8.patterns.event.DblClickEvent;
+import com.zk.java8.patterns.event.Event;
+import com.zk.java8.patterns.listener.ClickEventListener;
+import com.zk.java8.patterns.listener.DblClickEventListener;
+import com.zk.java8.patterns.source.ClickSource;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -1,6 +1,7 @@
 package com.zk.java8.patterns.listener;
 
-import com.github.jdk.patterns.event.Event;
+
+import com.zk.java8.patterns.event.Event;
 
 /**
  * Created by zk_chs on 16/7/7
