@@ -183,13 +183,13 @@
                             <host>localhost</host>
                             <basePath>/apiv1</basePath>
                             <info>
-                                <title>spring-boot-jersey</title>
+                                <title>${daemon.id} api</title>
                                 <version>1.0</version>
-                                <description>spring-boot-jersey rest doc</description>
+                                <description>${daemon.id} rest doc</description>
                             </info>
                             <templatePath>${basedir}/templates/strapdown.html.hbs</templatePath>
-                            <outputPath>generated/spring-boot-jersey/document.html</outputPath>
-                            <swaggerDirectory>generated/spring-boot-jersey/swagger-ui</swaggerDirectory>
+                            <outputPath>generated/${daemon.id}/document.html</outputPath>
+                            <swaggerDirectory>generated/${daemon.id}/swagger-ui</swaggerDirectory>
                         </apiSource>
                     </apiSources>
                 </configuration>
