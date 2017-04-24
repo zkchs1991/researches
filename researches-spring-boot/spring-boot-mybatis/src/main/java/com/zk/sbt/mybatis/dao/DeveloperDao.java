@@ -1,7 +1,7 @@
 package com.zk.sbt.mybatis.dao;
 
 import com.zk.sbt.entity.Developer;
-import com.zk.sbt.mybatis.mapper.DeveloperMapper;
+import com.zk.sbt.mybatis.dao.mapper.DeveloperMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 

@@ -1,4 +1,4 @@
-package com.zk.sbt.mybatis.mapper;
+package com.zk.sbt.mybatis.dao.mapper;
 
 import com.zk.sbt.entity.Developer;
 import org.apache.ibatis.annotations.Mapper;
