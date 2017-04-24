@@ -23,4 +23,11 @@ public class DefaultDeveloperService implements DeveloperService {
         return developer;
     }
 
+    @Override
+    public Developer findByName(String developerName) {
+        Developer developer = developerDao.findByName(developerName);
+        return developer;
+    }
+
+
 }

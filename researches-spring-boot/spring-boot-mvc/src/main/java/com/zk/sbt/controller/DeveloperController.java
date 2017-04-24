@@ -3,6 +3,7 @@ package com.zk.sbt.controller;
 import com.zk.sbt.entity.Developer;
 import com.zk.sbt.service.interfaces.DeveloperService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,6 +25,12 @@ public class DeveloperController {
     @RequestMapping(value = "/{developerId}", method = GET)
     public ResponseEntity<Developer> findById (@PathVariable("developerId") Long developerId){
         Developer developer = developerService.findById(developerId);
+        return ResponseEntity.ok(developer);
+    }
+
+    @RequestMapping(value = "/{developerName}", method = POST, consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    public ResponseEntity<Developer> findByName (@PathVariable("developerName") String developerName){
+        Developer developer = developerService.findByName(developerName);
         return ResponseEntity.ok(developer);
     }
 

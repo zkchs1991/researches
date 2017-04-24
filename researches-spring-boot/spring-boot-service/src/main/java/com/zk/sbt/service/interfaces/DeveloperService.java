@@ -9,4 +9,6 @@ public interface DeveloperService {
 
     Developer findById(Long developerId);
 
+    Developer findByName(String developerName);
+
 }
