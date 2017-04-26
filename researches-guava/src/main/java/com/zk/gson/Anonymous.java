@@ -30,8 +30,9 @@ public class Anonymous {
          * }
          * 这样一来便能完成构造
          *
-         * 重点: 此时我们通过someClass.getClass().getGenericSuperclass()便能获取父类的信息了
-         * 不过不采用匿名类,在没有父类的情况下,那么该方法得到的永远是{@link java.lang.Object}
+         * 重点:
+         * 此时我们通过someClass.getClass().getGenericSuperclass()便能获取父类的信息了
+         * 如果不采用匿名类,在没有父类的情况下,那么该方法得到的永远是{@link java.lang.Object}
          *
          * 拿到父类信息之后,接着便能获取父类的泛型信息
          * 强转为{@link java.lang.reflect.ParameterizedType}类型,改接口定义了泛型的获取方式
