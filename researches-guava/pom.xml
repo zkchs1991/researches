@@ -16,12 +16,14 @@
     </properties>
 
     <dependencies>
+        <!-- https://github.com/google/guava/wiki -->
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>${guava.version}</version>
         </dependency>
 
+        <!-- https://github.com/google/gson/blob/master/UserGuide.md -->
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
