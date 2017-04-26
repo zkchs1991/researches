@@ -46,9 +46,15 @@ public class Anonymous {
         SomeClass someClass = new SomeClass<List<String>>(){};
 
         Type superclass = someClass.getClass().getGenericSuperclass();
+        System.out.println(someClass);/** 实例对象 */
+        System.out.println(someClass.getClass()); /** 对象类型 */
+        System.out.println(superclass); /** 父类信息 */
+        System.out.println();
+
         ParameterizedType parameterized = (ParameterizedType) superclass;
         System.out.println(parameterized.getRawType());
         System.out.println(parameterized.getActualTypeArguments()[0]);
+        System.out.println();
 
         ParameterizedType parameterized2 = (ParameterizedType) parameterized.getActualTypeArguments()[0];
         System.out.println(parameterized2.getRawType());
