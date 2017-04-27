@@ -5,9 +5,19 @@ package com.zk.gson;
  */
 public class Result<T> {
 
-    public int code;
-    public String message;
-    public T data;
+    public static final Result<String> DEFAULT_RESULT= new Result(666, "zkchs1991", "178cm");
+
+    public Result (){}
+
+    private Result(int code, String message, T data){
+        this.code = code;
+        this.message = message;
+        this.data = data;
+    }
+
+    private int code;
+    private String message;
+    private T data;
 
     public int getCode() {
         return code;
