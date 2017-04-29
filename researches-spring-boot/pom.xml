@@ -23,6 +23,7 @@
         <module>spring-boot-mvc</module>
         <module>spring-boot-jsp</module>
         <module>spring-boot-log-starter</module>
+        <module>spring-boot-plugins</module>
     </modules>
 
     <properties>
@@ -101,6 +102,11 @@
             <dependency>
                 <groupId>com.zk</groupId>
                 <artifactId>spring-boot-log-starter</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zk</groupId>
+                <artifactId>spring-boot-plugins</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
