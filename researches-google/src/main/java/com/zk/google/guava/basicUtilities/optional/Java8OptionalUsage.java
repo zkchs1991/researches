@@ -2,6 +2,8 @@ package com.zk.google.guava.basicUtilities.optional;
 
 
 import com.zk.google.gson.Result;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.Optional;
 
@@ -14,6 +16,7 @@ import static com.zk.google.gson.Result.*;
  */
 public class Java8OptionalUsage {
 
+    private static final Logger log = LogManager.getLogger();
 
     public static void main(String[] args) {
 //        Optional<Result<String>> result = getOptionalResult(null);
@@ -27,7 +30,7 @@ public class Java8OptionalUsage {
         result.orElseThrow(() -> new NullPointerException("result is null"));
 
         /** 存在才对它做点什么 */
-        result.ifPresent(System.out::println);
+        result.ifPresent(log::info);
 
         /**
          * map函数

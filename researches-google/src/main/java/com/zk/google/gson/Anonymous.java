@@ -1,6 +1,8 @@
 package com.zk.google.gson;
 
 import com.zk.google.gson.inner.SomeClass;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
@@ -11,10 +13,12 @@ import java.util.List;
  */
 public class Anonymous {
 
+    private static final Logger log = LogManager.getLogger();
+
     public static void main(String[] args) {
         /**
          * 下面的方法无法进行实例化
-         * 因为{@link com.zk.gson.inner.SomeClass}的构造函数是protected作用域
+         * 因为{@link com.zk.google.gson.inner.SomeClass}的构造函数是protected作用域
          */
         // SomeClass someClass = new SomeClass();
 
@@ -41,24 +45,22 @@ public class Anonymous {
          *
          * gson的{@link com.google.gson.reflect.TypeToken}就是这样获取我们给出的泛型信息的
          *
-         * 还有另外一种获取泛型的方式,见{@link com.zk.gson.inner.SomeClass#main(String[])}
+         * 还有另外一种获取泛型的方式,见{@link com.zk.google.gson.inner.SomeClass#main(String[])}
          */
         SomeClass someClass = new SomeClass<List<String>>(){};
 
         Type superclass = someClass.getClass().getGenericSuperclass();
-        System.out.println(someClass);/** 实例对象 */
-        System.out.println(someClass.getClass()); /** 对象类型 */
-        System.out.println(superclass); /** 父类信息 */
-        System.out.println();
+        log.info("someClass对象地址: {}", someClass); /** 实例对象 */
+        log.info("someClass对象类型: {}", someClass.getClass()); /** 对象类型 */
+        log.info("someClass对象的父类信息: {}", superclass); /** 父类信息 */
 
         ParameterizedType parameterized = (ParameterizedType) superclass;
-        System.out.println(parameterized.getRawType());
-        System.out.println(parameterized.getActualTypeArguments()[0]);
-        System.out.println();
+        log.info("someClass对象的父类信息(不包含泛型信息): {}", parameterized.getRawType());
+        log.info("someClass对象的父类的泛型: {}", parameterized.getActualTypeArguments()[0]);
 
         ParameterizedType parameterized2 = (ParameterizedType) parameterized.getActualTypeArguments()[0];
-        System.out.println(parameterized2.getRawType());
-        System.out.println(parameterized2.getActualTypeArguments()[0]);
+        log.info("someClass对象的父类的泛型的类型: {}", parameterized2.getRawType());
+        log.info("someClass对象的父类的泛型的泛型: {}", parameterized2.getActualTypeArguments()[0]);
     }
 
 }

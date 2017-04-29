@@ -16,6 +16,12 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>com.zk</groupId>
+            <artifactId>researches-log4j2</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
         <!-- https://github.com/google/guava/wiki -->
         <dependency>
             <groupId>com.google.guava</groupId>

@@ -2,6 +2,8 @@ package com.zk.google.gson;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.lang.reflect.Type;
 import java.util.List;
@@ -10,6 +12,8 @@ import java.util.List;
  * Created by qcon on 2017/3/21.
  */
 public class Gson4Test {
+
+    private static final Logger log = LogManager.getLogger();
 
     private static Gson gson = new Gson();
 
@@ -22,7 +26,7 @@ public class Gson4Test {
     private static void serializedNameTest (){
         String json = "{\"name\":\"zk_chs\",\"age\":24,\"emailAddress\":\"zk_chs@example.com\",\"email\":\"zk_chs2@example.com\",\"email_address\":\"zk_chs3@example.com\"}";
         GsonUser gsonUser = gson.fromJson(json, GsonUser.class);
-        System.out.println(gsonUser.getEmailAddress()); // zk_chs3@example.com
+        log.info(gsonUser.getEmailAddress()); // zk_chs3@example.com
     }
 
     /** Gson中使用泛型 */
