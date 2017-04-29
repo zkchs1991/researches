@@ -9,9 +9,8 @@ import java.io.StringWriter;
 public class ExceptionTool {
 
     public static String getStackTrace (Throwable throwable){
-        StringWriter stringWriter = new StringWriter(1024);
-        PrintWriter printWriter = new PrintWriter(stringWriter, true);
-        throwable.printStackTrace(printWriter);
+        StringWriter stringWriter = new StringWriter();
+        throwable.printStackTrace(new PrintWriter(stringWriter));
         return stringWriter.toString();
     }
 
