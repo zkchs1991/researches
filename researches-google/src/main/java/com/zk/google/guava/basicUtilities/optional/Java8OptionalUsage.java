@@ -1,10 +1,12 @@
-package com.zk.guava.basicUtilities.optional;
+package com.zk.google.guava.basicUtilities.optional;
 
-import com.zk.gson.Result;
+
+import com.zk.google.gson.Result;
 
 import java.util.Optional;
 
-import static com.zk.gson.Result.*;
+import static com.zk.google.gson.Result.*;
+
 
 /**
  * Created by zk_chs on 4/27/17.

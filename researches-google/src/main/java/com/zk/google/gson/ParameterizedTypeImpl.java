@@ -1,4 +1,4 @@
-package com.zk.gson;
+package com.zk.google.gson;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;

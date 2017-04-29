@@ -1,4 +1,4 @@
-package com.zk.gson;
+package com.zk.google.gson;
 
 import com.google.gson.annotations.SerializedName;
 

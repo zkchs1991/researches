@@ -1,4 +1,4 @@
-package com.zk.gson;
+package com.zk.google.gson;
 
 /**
  * Created by qcon on 2017/3/21.

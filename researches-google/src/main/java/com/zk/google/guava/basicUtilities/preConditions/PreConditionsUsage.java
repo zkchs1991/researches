@@ -1,4 +1,4 @@
-package com.zk.guava.basicUtilities.preConditions;
+package com.zk.google.guava.basicUtilities.preConditions;
 
 import static com.google.common.base.Preconditions.*;
 

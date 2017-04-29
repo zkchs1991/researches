@@ -12,8 +12,8 @@
 		<module>researches-spring-boot</module>
 		<module>researches-java8</module>
         <module>researches-mybatis</module>
-		<module>researches-guava</module>
-	</modules>
+        <module>researches-google</module>
+    </modules>
 
 	<properties>
 		<java.version>1.8</java.version>

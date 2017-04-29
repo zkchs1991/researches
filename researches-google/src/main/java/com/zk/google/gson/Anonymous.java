@@ -1,6 +1,6 @@
-package com.zk.gson;
+package com.zk.google.gson;
 
-import com.zk.gson.inner.SomeClass;
+import com.zk.google.gson.inner.SomeClass;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
@@ -32,10 +32,10 @@ public class Anonymous {
          *
          * 重点:
          * 此时我们通过someClass.getClass().getGenericSuperclass()便能获取父类的信息了
-         * 如果不采用匿名类,在没有父类的情况下,那么该方法得到的永远是{@link java.lang.Object}
+         * 如果不采用匿名类,在没有父类的情况下,那么该方法得到的永远是{@link Object}
          *
          * 拿到父类信息之后,接着便能获取父类的泛型信息
-         * 强转为{@link java.lang.reflect.ParameterizedType}类型,改接口定义了泛型的获取方式
+         * 强转为{@link ParameterizedType}类型,改接口定义了泛型的获取方式
          * {#getRawType}获取实际类型
          * {#getActualTypeArguments}获取实际泛型类型
          *
