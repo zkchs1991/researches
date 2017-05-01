@@ -8,6 +8,8 @@ import java.util.Set;
 
 /**
  * Created by zk_chs on 5/1/17.
+ *
+ * 详细文档地址 -> https://github.com/google/guava/wiki/CollectionUtilitiesExplained
  */
 public class StaticConstructorsUsage {
 
