@@ -4,47 +4,71 @@ import java.text.NumberFormat;
 import java.text.ParseException;
 import java.util.Map;
 import java.util.TreeMap;
+import java.util.function.Supplier;
 
 /**
  * Created by qcon on 2017/3/27.
  */
 public class MapTool {
 
-    public static MapTool.MapBuilder builder() {
-        return new MapTool.MapBuilder();
+    // ==========================================builder===============================================
+
+    public static <K, V> Builder<K, V> builder() {
+        return new Builder<>();
     }
 
-    public static class MapBuilder {
+    public static class Builder<K, V> {
 
-        private Map<String, Object> map;
+        private Map<K, V> map;
 
-        MapBuilder() {
+        private Supplier<Boolean> whenFlag = () -> true;
+
+        Builder() {
             map = new TreeMap<>();
         }
 
-        public MapTool.MapBuilder put(String k, Object v) {
-            map.put(k, v);
+        Builder(Map<K, V> exist) {
+            map = new TreeMap<>(exist);
+        }
+
+        public Builder<K ,V> when(Supplier<Boolean> whenFlag) {
+            this.whenFlag = whenFlag;
             return this;
         }
 
-        public MapTool.MapBuilder put(String k, Object v, Object defaultValue) {
-            if (null == v) {
-                map.put(k, defaultValue);
-            } else {
+        private void resetWhenFlag() {
+            this.whenFlag = () -> true;
+        }
+
+        public Builder<K ,V> put(K k, V v) {
+            if (whenFlag.get()) {
+                if (null == k || "".equals(k)) {
+                    throw new NullPointerException("key may not be null in Builder");
+                }
                 map.put(k, v);
+            }
+            resetWhenFlag();
+            return this;
+        }
+
+        public Builder<K ,V> put(K k, V v, V dv) {
+            if (null == v) {
+                put(k, dv);
+            } else {
+                put(k, v);
             }
             return this;
         }
 
-        public MapTool.MapBuilder putIf(boolean flag, String k, Object v) {
-            return flag ? put(k, v) : this;
+        public Builder<K ,V> compute(K k, Supplier<V> supplierV) {
+            return put(k, supplierV.get());
         }
 
-        public MapTool.MapBuilder putIf(boolean flag, String k, Object v, Object defaultValue) {
-            return flag ? put(k, v, defaultValue) : this;
+        public Builder<K ,V> compute(K k, Supplier<V> supplierV, Supplier<V> supplierDV) {
+            return put(k, supplierV.get(), supplierDV.get());
         }
 
-        public Map<String, Object> buildMap() {
+        public Map<K, V> buildMap() {
             return map;
         }
 
