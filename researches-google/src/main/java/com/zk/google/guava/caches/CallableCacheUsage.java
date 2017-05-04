@@ -66,7 +66,7 @@ public class CallableCacheUsage {
             Thread.sleep(5000);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }≠
+        }
         return result;
     }
 
