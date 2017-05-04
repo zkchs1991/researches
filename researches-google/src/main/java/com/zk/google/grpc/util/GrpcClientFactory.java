@@ -11,10 +11,7 @@ import org.apache.commons.pool2.impl.GenericObjectPoolConfig;
 import java.util.stream.Stream;
 
 /**
- * 功能描述：TODO<br/>
- * 创建时间：2016-7-2<br/>
- *
- * @author Zhangkai
+ * Created by zk_chs on 16/6/30.
  */
 public class GrpcClientFactory extends BasePooledObjectFactory<GrpcClient> {
 
