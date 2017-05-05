@@ -14,12 +14,11 @@ import java.util.stream.Stream;
 
 /**
  * Created by zk_chs on 5/5/17.
- * <p>
+ *
  * 详细文档地址 -> https://github.com/google/guava/wiki/CachesExplained
  */
 public class CacheEvictionUsage {
 
-    private static Integer count = 1;
     private static final Logger log = LogManager.getLogger();
     private static final String key = "key";
     private static LoadingCache<String, Result<String>> caches;
