@@ -7,6 +7,8 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 
 /**
  * Created by Qcon on 2017/4/9.
+ *
+ * 当日志System.setProperty无效时，-Djava.util.logging.manager=org.apache.logging.log4j.jul.LogManager
  */
 @SpringBootApplication
 @EnableAutoConfiguration(exclude = DataSourceAutoConfiguration.class)
