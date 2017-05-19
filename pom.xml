@@ -14,7 +14,8 @@
         <module>researches-mybatis</module>
         <module>researches-google</module>
 		<module>researches-apache</module>
-	</modules>
+        <module>researches-elasticsearch</module>
+    </modules>
 
 	<properties>
 		<java.version>1.8</java.version>
